@@ -25,16 +25,14 @@ public class SalesManager {
         return min;
     }
 
-    public long averageCut (){
+    public long averageCut() {
         long average = 0;
-        int count = 0;
         for (long sale : sales) {
-            if (sale != this.max() && sale != this.min()) {
                 average += sale;
-                count++;
             }
+        return (average -this.max() - this.min()) / (sales.length - 2);
         }
-        return average/count;
+
     }
-}
+
 
